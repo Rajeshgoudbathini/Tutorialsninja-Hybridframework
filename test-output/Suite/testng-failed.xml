@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Register(failed)">
+    <classes>
+      <class name="com.totorialsninja.qa.Register">
+        <methods>
+          <include name="Register_with_Mandatoryfields"/>
+          <include name="verify_existing_email_with_registerpage"/>
+          <include name="teardown"/>
+          <include name="verifyRegisteraccount_withoutEntering_mandatoryfields"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.totorialsninja.qa.Register -->
+    </classes>
+  </test> <!-- Register(failed) -->
+  <test thread-count="5" parallel="tests" name="Search(failed)">
+    <classes>
+      <class name="com.totorialsninja.qa.Search">
+        <methods>
+          <include name="teardown"/>
+          <include name="verify_search_resultswith_Nodata"/>
+          <include name="verify_with_invaild_product"/>
+          <include name="setup"/>
+          <include name="verify_searchwith_vaildproduct"/>
+        </methods>
+      </class> <!-- com.totorialsninja.qa.Search -->
+    </classes>
+  </test> <!-- Search(failed) -->
+  <test thread-count="5" parallel="tests" name="Login(failed)">
+    <classes>
+      <class name="com.totorialsninja.qa.Login">
+        <methods>
+          <include name="verifyLoginWithInvalidEmailAndValidPassword"/>
+          <include name="setup"/>
+          <include name="verify_login_invalid_creadentials"/>
+          <include name="verify_login_vaild_creadentials"/>
+          <include name="verifyLoginWithvalidEmailAndInValidPassword"/>
+          <include name="verifyLoginWithoutProvidingAnyFields"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.totorialsninja.qa.Login -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->
